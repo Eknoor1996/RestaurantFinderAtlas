@@ -1,0 +1,24 @@
+
+<table class="table"> 
+        <thead class="thead-dark">
+        <tr>
+        <th scope="col">  Name  </th> 
+        <th scope="col">  Borough  </th> 
+        <th scope="col">  Cuisine  </th> 
+        <th scope="col">  Restaurant Id  </th> 
+        <th scope="col">  Address  </th> 
+        <th scope="col">  Delete </th>
+        </tr>
+        </thead>
+        {{#each data}}
+        <tr scope="row"> 
+        <td>  {{this.name}}  </td> 
+        <td>  {{this.borough}}  </td>
+        <td>  {{this.cuisine}} </td> 
+        <td> {{this.restaurant_id}} </td>
+        <td>  {{this.address.street}} </td>
+        <td><form action="/api/deleteRestaurant/{{this._id}}" method="get"> <button class="btn btn-danger" type="submit">Delete</button></form></td>
+        </tr>
+        {{/each}}
+</table>
+

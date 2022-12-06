@@ -1,0 +1,40 @@
+<h1>Data per page</h1> 
+
+<form action="/api/restaurantByPages/pages" method="post">
+<div class="form-floating">
+<label  for="perPage">Per Page Data:</label>
+<input class="form-control" type="number" id="perPage" name="perPage"><br>
+</div>
+<div class="form-floating">
+<label for="page">Page:</label>
+<input class="form-control" type="number" id="page" name="page"><br>
+</div>
+<div class="form-floating">
+<label for="borough">Borough:</label>
+<input class="form-control" type="text" id="borough" name="borough"><br>
+</div>
+<input class="btn btn-success" type="submit" value="Submit">
+</form>
+
+<table class="table"> 
+        <thead class="thead-dark">
+        <tr>
+        <th scope="col">  Name  </th> 
+        <th scope="col">  Borough  </th> 
+        <th scope="col">  Cuisine  </th> 
+        <th scope="col">  Restaurant Id  </th> 
+        <th scope="col">  Address  </th> 
+        <th scope="col">  Delete </th>
+        </tr>
+        </thead>
+        {{#each data}}
+        <tr scope="row"> 
+        <td>  {{this.name}}  </td> 
+        <td>  {{this.borough}}  </td>
+        <td>  {{this.cuisine}} </td> 
+        <td> {{this.restaurant_id}} </td>
+        <td>  {{this.address.street}} </td>
+        <td><form action="/api/deleteRestaurant/{{this.restaurant_id}}" method="get"> <button  class="btn btn-danger" type="submit">Delete</button></form></td>
+        </tr>
+        {{/each}}
+</table>

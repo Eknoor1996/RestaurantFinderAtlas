@@ -1,0 +1,27 @@
+<h1>{{title}}</h1>
+<p>Please enter the details for the new restaurant!</p><br>
+<form action="/api/insertDetails" method="post">
+  <label for="building">Building:</label>
+  <input class="form-control" type="text" id="building" name="building" required><br>
+  <label for="coord">Coordinates:</label>
+  <input  class="form-control" type="text" id="coord" name="coord" required><br>
+  <label for="street">Street:</label>
+  <input class="form-control" type="text" id="street" name="street" required><br>
+  <label for="zipcode">Zipcode:</label>
+  <input class="form-control" type="text" id="zipcode" name="zipcode" required><br>
+  <label for="borough">Borough:</label>
+  <input class="form-control" type="text" id="borough" name="borough" required><br>
+  <label for="cuisine">Cuisine:</label>
+  <input class="form-control" type="text" id="cuisine" name="cuisine" required><br>
+  <label for="date">Date:</label>
+  <input class="form-control" type="date" id="date" name="date"><br>
+  <label for="grade">Grade:</label>
+  <input class="form-control" type="text" id="grade" name="grade"><br>
+  <label for="score">Score:</label>
+  <input class="form-control" type="text" id="score" name="score"><br>
+  <label for="name">Restaurant Name:</label>
+  <input class="form-control" type="text" id="name" name="name" required><br>
+  <label for="restaurant_id">Restaurant ID:</label>
+  <input  class="form-control" type="text" id="restaurant_id" name="restaurant_id" required><br>
+  <input class="btn btn-success" type="submit" value="Submit">
+</form>

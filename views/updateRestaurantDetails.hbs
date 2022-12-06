@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<p>Let's update details for the restaurant.</p>
+<p>Kindly enter a valid ID number and the details that you need to update. </p><br>
+<form action="/api/updateDetails" method="post">
+  <label for="_id">ID:</label>
+  <input class="form-control" type="text" id="_id" name="_id"><br>
+  <label for="building">Building:</label>
+  <input class="form-control" type="text" id="building" name="building"><br>
+  <label for="coord">Coordinates:</label>
+  <input  class="form-control" type="text" id="coord" name="coord"><br>
+  <label for="street">Street:</label>
+  <input class="form-control" type="text" id="street" name="street"><br>
+  <label for="zipcode">Zipcode:</label>
+  <input class="form-control" type="text" id="zipcode" name="zipcode"><br>
+  <label for="borough">Borough:</label>
+  <input class="form-control" type="text" id="borough" name="borough"><br>
+  <label for="cuisine">Cuisine:</label>
+  <input class="form-control" type="text" id="cuisine" name="cuisine"><br>
+  <label for="date">Date:</label>
+  <input class="form-control" type="date" id="date" name="date"><br>
+  <label for="grade">Grade:</label>
+  <input class="form-control" type="text" id="grade" name="grade"><br>
+  <label for="score">Score:</label>
+  <input class="form-control" type="text" id="score" name="score"><br>
+  <label for="name">Restaurant Name:</label>
+  <input class="form-control" type="text" id="name" name="name"><br>
+  <label for="restaurant_id">Restaurant ID:</label>
+  <input  class="form-control" type="text" id="restaurant_id" name="restaurant_id"><br>
+  <input class="btn btn-success" type="submit" value="Submit">
+</form>
